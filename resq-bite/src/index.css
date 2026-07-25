@@ -1,0 +1,11 @@
+/* WHY: These three lines inject all of Tailwind's base styles and utility classes into our React app. /
+/ Delete everything else that was originally in this file. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+/* A clean, warm off-white background. No dark mode neon slop. */
+background-color: #FAFAF9;
+color: #1C1917;
+}
