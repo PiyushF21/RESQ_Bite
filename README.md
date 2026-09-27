@@ -1,130 +1,100 @@
-🍃 ResQ-Bite | Full-Stack Food Rescue Marketplace
+# 🍛 ResQ-Bite: Zero Food Waste Ecosystem
 
-🚀 The Mission
+ResQ-Bite is an end-to-end, gamified food rescue platform that connects restaurants with surplus food to budget-conscious students and NGOs. It is an intelligent marketplace driven by dynamic pricing, smart logistics routing, and a powerful gamified ecosystem.
 
-Zero Commercial Food Waste.
-Every day, perfectly good food is thrown away at the end of the day by restaurants and campus dining halls. Meanwhile, students struggle with tight budgets, and local charities lack consistent food sources.
+---
 
-ResQ-Bite is a 3-sided, real-time marketplace built to solve this. It connects local merchants with students for heavily discounted surplus meals, and features a time-triggered engine that automatically funnels expired drops directly to NGOs for bulk rescue.
+## 🌟 Core Innovations & USPs (Unique Selling Propositions)
 
-✨ Core Features & Architecture
+### 1. 📉 Dynamic Decay Pricing Engine & Rescue Countdown
+Prices for surplus food don't just stay static. ResQ-Bite's algorithm dynamically decays the price of the food as it approaches its expiration time. Students see a live **"🔥 PRICE DROPPING"** countdown (e.g., ₹120 → ₹99 → ₹79), creating urgency while maximizing revenue recovery for restaurants.
 
-This application was engineered with a strict role-based architecture to serve three distinct user types:
+### 2. 🧠 Smart Surplus Prediction (AI-Ready)
+ResQ-Bite doesn't just rescue food after it becomes surplus; it helps restaurants anticipate surplus. The dashboard provides a "Tomorrow's Predicted Surplus" breakdown (e.g., 18 Pizzas, 6 Salads) based on historical data, day of the week, and local events.
 
-1. The Student Portal (Gamified B2C)
+### 3. 🚚 Smart NGO Routing & Pickup Batching
+The platform intelligently filters listings. Small surpluses (e.g., < 10 meals) go to the **Student Radar**. Bulk drops (e.g., >= 10 meals) bypass students and are routed exclusively to the **NGO Dashboard**. The system even batches pickups into optimal routes (e.g., *Restaurant A → Restaurant B → NGO Center*) to minimize logistics overhead.
 
-Live Radar: Interactive, geospatial map (Leaflet) rendering real-time, nearby surplus drops.
+### 4. 🔄 Traceable "Rescue Chain" Lifecycle
+Every meal follows a visible, traceable lifecycle:
+`Surplus Created → Dynamic Pricing → Student Rescue → Food Saved` OR 
+`Bulk Surplus → NGO Matching → Fleet Dispatch → Community Distribution → Impact Recorded`
+This makes ResQ-Bite a fully traceable food-rescue ecosystem, not just a marketplace.
 
-Dynamic Claiming: High-concurrency claiming pipeline ensuring inventory integrity.
+### 5. 🏆 Gamification: Missions, Streaks & Loyalty
+- **Rescue Missions:** Users get daily/weekly challenges (e.g., *Rescue 3 meals before 8:30 PM* for +150 Rescue XP).
+- **Streak Protection:** Maintain a "Rescue Streak" (e.g., 6 days). Miss a day? Use a earned "Streak Freeze".
+- **ResQ Pass:** A loyalty system where 10 rescues unlock sponsored rewards (like a free beverage from a partner).
 
-Eco-Impact Engine: Real-time gamification tracking personal CO₂ emissions prevented and financial savings, automatically leveling up the user's "Eco-Warrior" status.
+### 6. 🏪 Restaurant "Waste Score" & Challenges
+Restaurants are assigned a **ResQ Score (e.g., 87/100)** based on meals rescued and food diverted. They earn badges like *Waste Warrior* or *Circular Champion*. The platform also hosts **Restaurant-vs-Restaurant Challenges** (e.g., *Mumbai Rescue Week*) where merchants compete on highest recovery rate, not sales.
 
-2. The Merchant Dashboard (B2B SaaS)
+### 7. 🌍 Live Impact Map & Personal Dashboards
+- **Live Impact Map:** A real-time map showing activity markers (🟢 Student Rescue, 🟠 Surplus, 🔵 NGO Donation).
+- **Personal Dashboard:** A detailed breakdown of Meals Rescued, Money Saved, kg of Food Diverted, and CO₂ avoided.
+- **Digital Certificates:** Restaurants and NGOs can generate downloadable, B2B-facing monthly "ResQ-Bite Impact Certificates" for their ESG reporting.
 
-Rapid Drop Pipeline: A streamlined form for merchants to publish end-of-day surplus inventory to the live radar in seconds.
+### 8. ⚡ Rescue Flash Drops
+Restaurants can intentionally create "Flash Drops" (e.g., *15 meals available at 70% off for the next 18 minutes*) triggering push notifications to nearby students, creating a Zomato-style flash-sale feeling focused entirely on surplus.
 
-Live Inventory Management: Real-time tracking of active claims, allowing merchants to cancel or adjust active drops on the fly.
+---
 
-3. The NGO / Charity Engine (Time-Triggered Bulk Dispatch)
+## 🚀 Existing Features Implemented
 
-Automated Expiration Logic: Food drops that pass their pickup deadline are instantly removed from the student radar.
+### For Students (Buyers)
+- **Live Drop Radar:** Search, filter (Veg/Vegan/etc), and sort active surplus food in their area.
+- **Activity History:** Keep track of past orders and secure pickup codes.
+- **Leaderboards & Badges:** Gamified stats showing money saved and CO₂ prevented.
 
-100% Discount Override: Expired items are automatically re-priced to $0.00 and pushed to a dedicated "Donation Radar."
+### For Restaurants (Merchants)
+- **Store Dashboard:** Monitor active and claimed listings, track revenue recovered, and see exact kilograms of food waste prevented.
+- **One-Click Publishing:** Publish a "Surplus Drop" by defining base price, minimum price (for dynamic decay), and expiration time.
+- **Automated NGO Donations:** Unsold food automatically converts into free NGO donations at expiration.
 
-Bulk Claiming: NGOs can dispatch trucks to claim the entirety of remaining batches, preventing landfill waste and generating massive CO₂ savings metrics.
+### For NGOs (Distributors)
+- **Donation Radar:** View map and list of all bulk donations and expired items available for free pickup.
+- **Fleet Dispatching:** "Dispatch Truck" functionality to claim bulk orders.
 
-🛠 Tech Stack
+---
 
-Frontend:
+## 🔐 How to Login (Pre-seeded Accounts)
 
-React.js (Vite)
+**Merchant / Hotel Login:**
+- **Email:** `merchant@example.com`
+- **Password:** `password123`  
+*(Or simply click "Sign Up" and register as a "Restaurant Partner")*
 
-Tailwind CSS (Premium utility-first styling, glassmorphism UI)
+**Student Login:**
+- **Email:** `student@example.com`
+- **Password:** `password123`
 
-React-Leaflet / OpenStreetMap (Interactive geospatial rendering)
+**NGO Login:**
+- **Email:** `ngo@example.com`
+- **Password:** `password123`
 
-Lucide React (Iconography)
+---
 
-Backend:
+## 🛠 Tech Stack
+- **Frontend:** React + Vite, Tailwind CSS, Lucide Icons
+- **Backend:** Node.js, Express.js
+- **Database:** MySQL
+- **Maps:** Google Maps API
+- **State Management:** React Context API
 
-Node.js & Express.js (REST API architecture)
+## 🔑 API Endpoints
 
-MySQL (Relational database with complex constraints and indexing)
-
-mysql2 connection pooling (Optimized for high-concurrency read/writes)
-
-Bcrypt (Secure password hashing)
-
-⚙️ Technical Highlights
-
-Time-Travel Developer API: Built a custom /api/demo/fast-forward endpoint that manipulates the MySQL database clock. This allows recruiters/testers to instantly fast-forward active food drops into an "expired" state, seamlessly demonstrating the NGO hand-off logic without waiting for real-world timers.
-
-Database Constraints & Transactions: Implemented robust SQL FOR UPDATE transaction locks during the claiming process to prevent race conditions (e.g., two students trying to buy the last slice of pizza simultaneously).
-
-Auto-Provisioning Profiles: Developed a backend fallback that automatically generates physical restaurant profiles (is_verified = TRUE) when a new merchant creates an account, ensuring the drop-creation pipeline never breaks during demos.
-
-💻 Local Setup & Installation
-
-Want to run ResQ-Bite locally? Follow these steps:
-
-Prerequisites
-
-Node.js (v16+)
-
-MySQL Server running locally
-
-1. Clone the Repository
-
-git clone https://github.com/PiyushF21/RESQ_Bite.git
-cd RESQ_Bite
-
-
-2. Database Setup
-
-Open your MySQL client.
-
-Create a new database: CREATE DATABASE resq_bite;
-
-Execute the SQL scripts located in the backend/ folder in this order:
-
-schema_part_1.sql (Users & Restaurants)
-
-mysql_schema_step1.sql / step2 / step3 / step4 / step5
-
-setup_gamification.sql
-
-seed_data.sql (To populate dummy restaurants and active food drops)
-
-3. Backend Setup
-
-cd backend
-npm install express cors mysql2 bcryptjs dotenv
-
-
-Create a .env file in the backend/ directory:
-
-PORT=5000
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_mysql_password
-DB_NAME=resq_bite
-
-
-Start the server:
-
-node server.js
-
-
-4. Frontend Setup
-
-Open a new terminal window:
-
-# Return to the root folder
-cd ..
-npm install
-npm run dev
-
-
-The app will now be running on http://localhost:5173!
-
-Designed & Built by Piyush.
+| Method | Endpoint | Auth | Role | Description |
+|--------|----------|------|------|-------------|
+| POST | `/api/auth/register` | ❌ | — | Create account |
+| POST | `/api/auth/login` | ❌ | — | Login & get JWT |
+| GET | `/api/listings/active` | ✅ | Student | Active surplus drops (qty < 10) |
+| GET | `/api/listings/donations` | ✅ | NGO | Expired OR Bulk items (qty >= 10) |
+| POST | `/api/listings` | ✅ | Merchant | Create a surplus drop |
+| DELETE | `/api/listings/:id` | ✅ | Merchant | Cancel a drop |
+| GET | `/api/listings/merchant` | ✅ | Merchant | Store's own listings |
+| GET | `/api/orders/claim` | ✅ | Student | Claim 1 item (generates pickup code)|
+| POST | `/api/donations/claim` | ✅ | NGO | Bulk claim donation |
+| GET | `/api/orders/history` | ✅ | Any | User's activity history |
+| GET | `/api/stats/leaderboard` | ✅ | Any | Ranked leaderboard |
+| GET | `/api/stats/global` | ❌ | Any | Landing page impact counters |
+| POST | `/api/demo/fast-forward` | — | Dev only | Time travel (dev) |
